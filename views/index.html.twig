@@ -2,24 +2,55 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="book.css">
-	<title>Mybooks</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ asset('/lib/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{ asset('/css/book.css')}}">
+	<title>Mybooks - Home</title>
 	
 </head>
 	<body>
-		<header><h1>Mybooks</h1></header>
+	<div class="container">
+		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-target">
+
+                        <span class="icon-bar"></span>
+
+                        <span class="icon-bar"></span>
+
+                        <span class="icon-bar"></span>
+
+                    </button>
+
+                    <a class="navbar-brand" href="">MyBooks</a>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse-target">
+
+                </div>
+
+            </div><!-- /.container -->
+
+        </nav>
 
 		{% for book in books %}
-			<article class="container">
+			<article>
 				<h2>
-					{{book.title}}
+					{{ book.title }}
 				</h2>  
-				<p>{{book.summary}}</p>
-				<p>L'id de cet book est: {{book.id}}</p>
+				<p>{{ book.summary }}</p>
+				
+				
 			</article>
 		{% endfor %}
 
 		<footer class="footer">Mybooks est construit avec PHP, Silex, Twig et Boostrap</footer>
-
+</div>
 	</body>
 </html>
