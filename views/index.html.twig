@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="book.css">
+	<title>Mybooks</title>
+	
+</head>
+	<body>
+		<header><h1>Mybooks</h1></header>
+
+		{% for book in books %}
+			<article class="container">
+				<h2>
+					{{book.title}}
+				</h2>  
+				<p>{{book.summary}}</p>
+				<p>L'id de cet book est: {{book.id}}</p>
+			</article>
+		{% endfor %}
+
+		<footer class="footer">Mybooks est construit avec PHP, Silex, Twig et Boostrap</footer>
+
+	</body>
+</html>
