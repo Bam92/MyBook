@@ -10,13 +10,12 @@
 		<header><h1>Mybooks</h1></header>
 
 		<?php foreach ($books as $book): ?>
-
 			<article class="container">
 				<h2>
-					<?php echo htmlspecialchars($book['book_title']); ?>
+					<?php echo $book->title() ?>
 				</h2>  
-
-				<p><?php echo nl2br(htmlspecialchars($book['book_summary'])); ?></p>
+				<p><?php echo $book->summary() ?></p>
+				<p>L'id de cet article est: <?php echo $book->id() ?></p>
 			</article>
 		<?php endforeach ?>
 
