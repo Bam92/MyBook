@@ -41,7 +41,7 @@ class BookDAO extends DAO
 		foreach ($result as $row) 
 		{
 			$bookId = $row['book_id'];
-			$books['$bookId'] = $this->buildDomainObject($row);
+			$books[$bookId] = $this->buildDomainObject($row);
 		}
 		return $books;
 	}
